@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/handcount",
+            "lambdaFunction": "mainfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/handcount"
+        }
+    ],
+    "resourceName": "mainrestapi",
+    "apiName": "mainrestapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "mainfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-hasura-dev-174730-authRole",
+        "unAuthRoleName": "amplify-hasura-dev-174730-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "mainfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
